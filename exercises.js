@@ -6,7 +6,15 @@
 // Put your answer below -------------------------
 
 
-
+(function() {
+    let result = [];
+    function triplets(str, int) {
+        for (let i = 0; i < int; i++) {
+            result.push(str);
+        }
+    }
+    console.log('triplets', result);
+})();
 
 
 
@@ -24,7 +32,15 @@
 // Put your answer below -------------------------
 
 
-
+(function() {
+    let backwards = [];
+    function reverse(arr) {
+        for (i = arr.length; i > 0; i--) {
+            backwards.push(arr[i]);
+        };
+    }
+    console.log('backwards', backwards)
+})();
 
 
 
@@ -41,7 +57,16 @@
 // Put your answer below -------------------------
 
 
-
+(function() {
+    function onlyTrue(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let val = arr[i];
+            if (!arr[i]) {
+              truther = arr.splice(i, 1)
+            };
+        }
+    }
+})();
 
 
 
@@ -60,6 +85,16 @@
 // Put your answer below -------------------------
 
 
+(function() {
+    let nested = {};
+    function toObj(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let currArr = arr[i];
+            nested[currArr[0]] = currArr[1];
+        }
+    }
+    console.log(nested)
+})();
 
 
 
@@ -78,7 +113,9 @@
 // Put your answer below -------------------------
 
 
+(function() {
 
+})();
 
 
 
