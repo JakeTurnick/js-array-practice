@@ -2,14 +2,27 @@
 // Testing 1-2-3
 // https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
 
-
+var number=function(array){
+    //your awesome code here
+    for (let i = 0; i < array.length; i++) {
+      count = i + 1;
+      array[i] = `${count}: ${array[i]}`
+    }
+    return array;
+  }
 
 
 // # 2
 // Filling an array (part 1)
 // https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript
 
-
+const arr = N => {
+    let newArr = [];
+    for (let i = 0; i < N; i++) {
+      newArr.push(i);
+    }
+    return newArr
+  };
 
 
 // # 3
