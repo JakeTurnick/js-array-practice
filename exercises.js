@@ -14,6 +14,7 @@
         }
     }
     console.log('triplets', result);
+    return result;
 })();
 
 
@@ -40,6 +41,7 @@
         };
     }
     console.log('backwards', backwards)
+    return backwards;
 })();
 
 
@@ -65,6 +67,8 @@
               truther = arr.splice(i, 1)
             };
         }
+        console.log(arr);
+        return arr;
     }
 })();
 
@@ -94,6 +98,7 @@
         }
     }
     console.log(nested)
+    return nested;
 })();
 
 
@@ -114,7 +119,19 @@
 
 
 (function() {
-
+    function removeDup(arr) {
+        let copy = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (copy.includes(arr[i])) {
+                arr.splice(i, 1);
+                i -= 1;
+            } else {
+                copy.push(arr[i]);
+            };
+        }
+        console.log('arr', arr);
+        return(arr)
+    }
 })();
 
 
@@ -136,6 +153,9 @@
 // Put your answer below -------------------------
 
 
+(function() {
+
+})();
 
 
 
