@@ -130,20 +130,38 @@
 (function() {
     function trueDups(arr1, arr2) {
         let check = true;
-        for (let i = 0; i < arr1.length; i++) {
-            if (!arr2.includes(arr1[i])) {
-                check = false;
-            }
+        if (arr1.length !== arr2.length) {
+            check = false;
+            return check;
         }
-  		for (let i = 0; i < arr2.length; i++) {
-            if (!arr2.includes(arr1[i])) {
+
+        arr1.sort();
+        arr2.sort();
+
+        for (let i = 0; i < arr1.length; i++){
+            if (arr1[i] !== arr2[i]) {
                 check = false;
             }
         }
         console.log(check);
         return check;
+
+        // for (let i = 0; i < arr1.length; i++) {
+        //     if (!arr2.includes(arr1[i])) {
+        //         check = false;
+        //     }
+        // }
+  		// for (let i = 0; i < arr2.length; i++) {
+        //     if (!arr2.includes(arr1[i])) {
+        //         check = false;
+        //     }
+        // }
+        
     }
 })();
+//After notes - could've compared the length of the arrays
+//if they aren't equal length just return false
+//no need to loop through the array twice, once for each array length
 
 
 // -----------------------------------------------
