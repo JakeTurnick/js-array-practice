@@ -31,12 +31,12 @@
 (function() {
     let backwards = [];
     function reverse(arr) {
-        for (i = arr.length; i > 0; i--) {
+        for (i = arr.length - 1; i >= 0; i--) {
             backwards.push(arr[i]);
         };
+        console.log('backwards', backwards);
+        return backwards;
     }
-    console.log('backwards', backwards)
-    return backwards;
 })();
 
 
