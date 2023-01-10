@@ -135,6 +135,7 @@
             return check;
         }
 
+        //fixed during lesson
         arr1.sort();
         arr2.sort();
 
