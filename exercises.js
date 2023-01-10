@@ -51,14 +51,14 @@
 
 (function() {
     function onlyTrue(arr) {
+        let truther = [];
         for (let i = 0; i < arr.length; i++) {
-            let val = arr[i];
-            if (!arr[i]) {
-              truther = arr.splice(i, 1)
+            if (arr[i]) {
+              truther.push(arr[i])
             };
         }
-        console.log(arr);
-        return arr;
+        console.log(truther);
+        return truther;
     }
 })();
 
