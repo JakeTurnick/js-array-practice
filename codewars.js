@@ -30,15 +30,24 @@ const arr = N => {
 // https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
 
 function flyBy(lamps, drone){
-    let path = '';
-    for (let i = 0; i < drone.length; i++) {
-      path += 'o'
-    }
-    let offLamps = lamps.slice(drone.length, lamps.length);
-    let droneLamps = path + offLamps;
-    
-    return droneLamps;
+
+  let count;
+  if (drone.length > lamps.length) {
+    count = lamps.length
+  } else {
+    count = drone.length
   }
+
+  let path = '';
+  for (let i = 0; i < count; i++) {
+    path += 'o'
+  }
+  let offLamps = lamps.slice(drone.length, lamps.length);
+  let droneLamps = path + offLamps;
+  
+  return droneLamps;
+
+}
 
 
 // # 4
@@ -46,13 +55,13 @@ function flyBy(lamps, drone){
 // https://www.codewars.com/kata/563e320cee5dddcf77000158/train/javascript
 
 function getAverage(marks){
-    let sum = 0;
-    for (let i = 0; i < marks.length; i++) {
-      sum += marks[i];
-    }
-    let avg = sum / marks.length;
-    return Math.round(avg)
+  let sum = 0;
+  for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
   }
+  let avg = sum / marks.length;
+  return Math.floor(avg)
+}
 
 
 // #5
